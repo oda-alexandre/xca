@@ -37,7 +37,7 @@ Use [docker](https://www.docker.com)
 
 ## INSTALL
 
-```docker run -d --rm --name xca -v ${HOME}:/home/xca -v /tmp/.X11-unix/:/tmp/.X11-unix/ -e DISPLAY alexandreoda/xca```
+```docker run -d --rm --name xca -v ${HOME}:/home/xca -v /tmp/.X11-unix/:/tmp/.X11-unix/ --env=QT_X11_NO_MITSHM=1 -e DISPLAY alexandreoda/xca```
 
 ## LICENSE
 
