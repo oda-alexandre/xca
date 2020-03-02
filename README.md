@@ -1,7 +1,6 @@
 # XCA
 
-<img src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/17155228/xca.png" width="200" height="200"/>
-
+![logo](https://assets.gitlab-static.net/uploads/-/system/project/avatar/17155228/xca.png)
 
 ## INDEX
 
@@ -14,16 +13,13 @@
   - [INSTALL](#install)
   - [LICENSE](#license)
 
-
 ## BADGES
 
 [![pipeline status](https://gitlab.com/oda-alexandre/xca/badges/master/pipeline.svg)](https://gitlab.com/oda-alexandre/xca/commits/master)
 
-
 ## FIRST UPDATE
 
 Date: 01-01-01
-
 
 ## INTRODUCTION
 
@@ -39,16 +35,13 @@ Automatically updated on :
 
 - [docker hub public](https://hub.docker.com/r/alexandreoda/xca)
 
-
 ## PREREQUISITES
 
 Use [docker](https://www.docker.com)
 
-
 ## INSTALL
 
 ```docker run -d --rm --name xca -v ${HOME}:/home/xca -v /tmp/.X11-unix/:/tmp/.X11-unix/ --env=QT_X11_NO_MITSHM=1 -e DISPLAY alexandreoda/xca```
-
 
 ## LICENSE
 
