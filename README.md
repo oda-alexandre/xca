@@ -10,6 +10,8 @@
   - [INTRODUCTION](#introduction)
   - [PREREQUISITES](#prerequisites)
   - [INSTALL](#install)
+    - [DOCKER RUN](#docker-run)
+    - [DOCKER COMPOSE](#docker-compose)
   - [LICENSE](#license)
 
 ## BADGES
@@ -24,7 +26,7 @@ Docker image of :
 
 Continuous integration on :
 
-- [gitlab](https://gitlab.com/oda-alexandre/xca/pipelines)
+- [gitlab pipelines](https://gitlab.com/oda-alexandre/xca/pipelines)
 
 Automatically updated on :
 
@@ -36,7 +38,30 @@ Use [docker](https://www.docker.com)
 
 ## INSTALL
 
-```docker run -d --rm --name xca -v ${HOME}:/home/xca -v /tmp/.X11-unix/:/tmp/.X11-unix/ --env=QT_X11_NO_MITSHM=1 -e DISPLAY alexandreoda/xca```
+### DOCKER RUN
+
+```\
+docker run -d --rm --name xca -v ${HOME}:/home/xca -v /tmp/.X11-unix/:/tmp/.X11-unix/ --env=QT_X11_NO_MITSHM=1 -e DISPLAY alexandreoda/xca
+```
+
+### DOCKER COMPOSE
+
+```yml
+version: "3.7"
+
+services:
+  xca:
+    container_name: xca
+    image: alexandreoda/xca
+    restart: "no"
+    privileged: false
+    environment:
+      - DISPLAY
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      - "${HOME}:/home/xca"
+      - "/tmp/.X11-unix/:/tmp/.X11-unix/"
+```
 
 ## LICENSE
 
