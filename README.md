@@ -41,7 +41,13 @@ Use [docker](https://www.docker.com)
 ### DOCKER RUN
 
 ```\
-docker run -d --rm --name xca -v ${HOME}:/home/xca -v /tmp/.X11-unix/:/tmp/.X11-unix/ --env=QT_X11_NO_MITSHM=1 -e DISPLAY alexandreoda/xca
+docker run -d --rm \
+--name xca \
+-e DISPLAY \
+--env=QT_X11_NO_MITSHM=1 \
+-v ${HOME}:/home/xca \
+-v /tmp/.X11-unix/:/tmp/.X11-unix/ \
+alexandreoda/xca
 ```
 
 ### DOCKER COMPOSE
