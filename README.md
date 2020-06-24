@@ -2,8 +2,6 @@
 
 ![logo](https://assets.gitlab-static.net/uploads/-/system/project/avatar/17155228/xca.png)
 
-## INDEX
-
 - [XCA](#xca)
   - [INDEX](#index)
   - [BADGES](#badges)
@@ -36,7 +34,7 @@ Automatically updated on :
 
 Use [docker](https://www.docker.com)
 
-## INSTALL
+## BUILD
 
 ### DOCKER RUN
 
